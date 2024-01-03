@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MyFitnessApp: App {
+    var favoritesManager = FavoritesManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(favoritesManager)
         }
     }
 }

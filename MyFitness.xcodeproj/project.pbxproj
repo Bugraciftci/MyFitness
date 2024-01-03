@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13C3C3C02B45986D000287A0 /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C3C3BF2B45986D000287A0 /* ExerciseDetailView.swift */; };
 		13F0C92E2B44718F00D7A69C /* MyFitnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F0C92D2B44718F00D7A69C /* MyFitnessApp.swift */; };
 		13F0C9302B44718F00D7A69C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F0C92F2B44718F00D7A69C /* ContentView.swift */; };
 		13F0C9322B44719000D7A69C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13F0C9312B44719000D7A69C /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 		13F0C95E2B44750400D7A69C /* MuscleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F0C95D2B44750400D7A69C /* MuscleDetailView.swift */; };
 		13F0C9602B447D4900D7A69C /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F0C95F2B447D4900D7A69C /* FavoritesView.swift */; };
 		13F0C9622B447D5C00D7A69C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F0C9612B447D5C00D7A69C /* SettingView.swift */; };
+		13F0C9662B4588DB00D7A69C /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F0C9652B4588DB00D7A69C /* FavoritesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13C3C3BF2B45986D000287A0 /* ExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
 		13F0C92A2B44718F00D7A69C /* MyFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F0C92D2B44718F00D7A69C /* MyFitnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFitnessApp.swift; sourceTree = "<group>"; };
 		13F0C92F2B44718F00D7A69C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		13F0C95D2B44750400D7A69C /* MuscleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleDetailView.swift; sourceTree = "<group>"; };
 		13F0C95F2B447D4900D7A69C /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		13F0C9612B447D5C00D7A69C /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		13F0C9652B4588DB00D7A69C /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 				13F0C95D2B44750400D7A69C /* MuscleDetailView.swift */,
 				13F0C95F2B447D4900D7A69C /* FavoritesView.swift */,
 				13F0C9612B447D5C00D7A69C /* SettingView.swift */,
+				13C3C3BF2B45986D000287A0 /* ExerciseDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				13F0C95B2B44722600D7A69C /* Muscle.swift */,
+				13F0C9652B4588DB00D7A69C /* FavoritesManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,12 +295,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				13F0C95C2B44722600D7A69C /* Muscle.swift in Sources */,
+				13C3C3C02B45986D000287A0 /* ExerciseDetailView.swift in Sources */,
 				13F0C9582B4471B300D7A69C /* MuscleListView.swift in Sources */,
 				13F0C9602B447D4900D7A69C /* FavoritesView.swift in Sources */,
 				13F0C9622B447D5C00D7A69C /* SettingView.swift in Sources */,
 				13F0C95E2B44750400D7A69C /* MuscleDetailView.swift in Sources */,
 				13F0C9302B44718F00D7A69C /* ContentView.swift in Sources */,
 				13F0C92E2B44718F00D7A69C /* MyFitnessApp.swift in Sources */,
+				13F0C9662B4588DB00D7A69C /* FavoritesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
