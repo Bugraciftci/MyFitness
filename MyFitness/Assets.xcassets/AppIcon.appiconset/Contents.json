@@ -1,0 +1,14 @@
+{
+  "images" : [
+    {
+      "filename" : "DALL·E 2024-01-03 02.16.03 - A gender-neutral vector-style app icon representing a fitness app used by both men and women. The design features two overlapping silhouettes, one rep.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
