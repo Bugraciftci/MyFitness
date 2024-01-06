@@ -8,12 +8,24 @@ struct WorkoutPlan: Identifiable {
     var difficultyLevel: Int
 }
 
+
+// Define the Day and WorkoutDay structs if not already defined
+struct Day: Identifiable {
+    let id = UUID()
+    var dayNumber: Int
+    // Add more properties as needed
+}
+
+struct WorkoutDay: Identifiable {
+    let id = UUID()
+    var dayNumber: Int
+    var exercises: [Exercise] // Ensure this is the correct Exercise struct
+}
+
 struct PersonalWorkoutView: View {
-    let workoutPlans: [WorkoutPlan] = [
-        WorkoutPlan(title: "KOL BAŞLANGIÇ DÜZEYİ", description: "Yağları yakın ve kas kütlesi kazanın", imageName: "beginner_arms", difficultyLevel: 1),
-        WorkoutPlan(title: "KOL ORTA DÜZEY", description: "Kısa süre içinde kollara şekil verin", imageName: "intermediate_arms", difficultyLevel: 2),
-        WorkoutPlan(title: "KOL GELİŞMİŞ", description: "Daha büyük ve güçlü kollara sahip olun", imageName: "advanced_arms", difficultyLevel: 3)
-    ]
+    let workoutPlans: [WorkoutPlan] = []
+
+    let workoutDays: [Day] = []
 
     var body: some View {
         NavigationView {
@@ -22,12 +34,12 @@ struct PersonalWorkoutView: View {
                     WorkoutPlanRowView(plan: plan)
                 }
             }
-            .navigationBarTitle("Antrenman Planı Seçin")
+            .navigationBarTitle("Workout Plans", displayMode: .large)
         }
     }
 }
 
-struct WorkoutPlanSelectionView_Previews: PreviewProvider {
+struct PersonalWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
         PersonalWorkoutView()
     }

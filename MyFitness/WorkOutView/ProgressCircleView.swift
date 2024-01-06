@@ -1,10 +1,3 @@
-//
-//  ProgressCircleView.swift
-//  MyFitness
-//
-//  Created by Muhammed Buğra on 6.01.2024.
-//
-
 import SwiftUI
 
 struct ProgressCircleView: View {
@@ -32,7 +25,8 @@ struct ProgressCircleView: View {
     }
 }
 
-
-#Preview {
-    ProgressCircleView(percentage: 56.0)
+struct ProgressCircleView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProgressCircleView(percentage: 0.56) // Example percentage
+    }
 }

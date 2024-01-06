@@ -64,10 +64,3 @@ struct ExerciseDetailView: View {
     }
 }
 
-struct ExerciseDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        let fakeFavoritesManager = FavoritesManager()
-        return ExerciseDetailView(exercise: Exercise(name: "Biceps Curl", photo: Image("biceps_image"), videoName: "biceps_curl_video"), favoritesManager: fakeFavoritesManager)
-            .environmentObject(fakeFavoritesManager)
-    }
-}

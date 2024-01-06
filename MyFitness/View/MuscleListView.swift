@@ -38,7 +38,7 @@ struct MuscleListView: View {
 // Dummy data for preview
 struct MuscleListView_Previews: PreviewProvider {
     static var previews: some View {
-        MuscleListView(muscles: [Muscle(name: "Biceps", photo: Image("biceps_image"), videoName: "biceps_video", exercises: [])])
+        MuscleListView(muscles: [Muscle(name: "Biceps", photo: Image("biceps_image"), videoName: "biceps_video", description: "deneeme", exercises: [])])
             .environmentObject(FavoritesManager())
     }
 }

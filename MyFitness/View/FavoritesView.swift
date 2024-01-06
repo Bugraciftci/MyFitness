@@ -1,13 +1,13 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    @EnvironmentObject var favoritesManager: FavoritesManager
+    @EnvironmentObject var favoritesManager: FavoritesManager // This is your shared instance
 
     var body: some View {
         NavigationView {
             List {
                 ForEach(favoritesManager.favoriteExercises, id: \.self) { exerciseName in
-                    NavigationLink(destination: ExerciseDetailView(exercise: Exercise(name: exerciseName, photo: Image("default_photo"), videoName: "default_video"), favoritesManager: FavoritesManager())) {
+                    NavigationLink(destination: ExerciseDetailView(exercise: Exercise(name: exerciseName,repetitions: 10, imageName: "", photo: Image("default_photo")), favoritesManager: favoritesManager)) { // Pass the shared instance
                         Text(exerciseName)
                     }
                 }
@@ -28,6 +28,6 @@ struct FavoritesView: View {
 struct FavoritesView_Previews: PreviewProvider {
     static var previews: some View {
         FavoritesView()
-            .environmentObject(FavoritesManager())
+            .environmentObject(FavoritesManager()) // Provide the environment object for the preview
     }
 }

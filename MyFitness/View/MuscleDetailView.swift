@@ -36,12 +36,4 @@ struct MuscleDetailView: View {
     }
 }
 
-struct MuscleDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        let testMuscle = Muscle(name: "Biceps", photo: Image("biceps_image"), videoName: "biceps_video", exercises: [
-            Exercise(name: "Bicep Curl", photo: Image("biceps_image"), videoName: "bicep_curl_video")
-        ])
-        return MuscleDetailView(muscle: testMuscle)
-            .environmentObject(FavoritesManager())
-    }
-}
+

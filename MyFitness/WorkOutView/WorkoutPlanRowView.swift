@@ -1,10 +1,3 @@
-//
-//  WorkoutPlanRowView.swift
-//  MyFitness
-//
-//  Created by Muhammed Buğra on 6.01.2024.
-//
-
 import SwiftUI
 
 struct WorkoutPlanRowView: View {
@@ -12,7 +5,7 @@ struct WorkoutPlanRowView: View {
     
     var body: some View {
         HStack {
-            Image(plan.imageName) // Make sure this image is in your assets folder
+            Image(plan.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 100, height: 100)
@@ -36,7 +29,7 @@ struct WorkoutPlanRowView: View {
                 }
             }
             .padding(.leading)
-        
+            
             Spacer()
         }
     }
