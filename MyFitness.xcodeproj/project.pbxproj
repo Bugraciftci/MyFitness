@@ -21,6 +21,10 @@
 		13F0C9602B447D4900D7A69C /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F0C95F2B447D4900D7A69C /* FavoritesView.swift */; };
 		13F0C9622B447D5C00D7A69C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F0C9612B447D5C00D7A69C /* SettingView.swift */; };
 		13F0C9662B4588DB00D7A69C /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F0C9652B4588DB00D7A69C /* FavoritesManager.swift */; };
+		13FF3B122B48ECDA007DB516 /* PersonelWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FF3B112B48ECDA007DB516 /* PersonelWorkoutView.swift */; };
+		13FF3B142B49D5A0007DB516 /* WorkoutPlanRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FF3B132B49D5A0007DB516 /* WorkoutPlanRowView.swift */; };
+		13FF3B162B49D63C007DB516 /* WorkoutPlanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FF3B152B49D63C007DB516 /* WorkoutPlanDetailView.swift */; };
+		13FF3B192B49DB68007DB516 /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FF3B182B49DB68007DB516 /* ProgressCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 		13F0C95F2B447D4900D7A69C /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		13F0C9612B447D5C00D7A69C /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		13F0C9652B4588DB00D7A69C /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		13FF3B112B48ECDA007DB516 /* PersonelWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonelWorkoutView.swift; sourceTree = "<group>"; };
+		13FF3B132B49D5A0007DB516 /* WorkoutPlanRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlanRowView.swift; sourceTree = "<group>"; };
+		13FF3B152B49D63C007DB516 /* WorkoutPlanDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlanDetailView.swift; sourceTree = "<group>"; };
+		13FF3B182B49DB68007DB516 /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				13F0C92D2B44718F00D7A69C /* MyFitnessApp.swift */,
+				13FF3B172B49D6A8007DB516 /* WorkOutView */,
 				13F0C9592B4471C600D7A69C /* View */,
 				13F0C95A2B4471D500D7A69C /* Model */,
 				13F0C9312B44719000D7A69C /* Assets.xcassets */,
@@ -162,6 +171,17 @@
 				13F0C9652B4588DB00D7A69C /* FavoritesManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		13FF3B172B49D6A8007DB516 /* WorkOutView */ = {
+			isa = PBXGroup;
+			children = (
+				13FF3B132B49D5A0007DB516 /* WorkoutPlanRowView.swift */,
+				13FF3B112B48ECDA007DB516 /* PersonelWorkoutView.swift */,
+				13FF3B152B49D63C007DB516 /* WorkoutPlanDetailView.swift */,
+				13FF3B182B49DB68007DB516 /* ProgressCircleView.swift */,
+			);
+			path = WorkOutView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,10 +317,14 @@
 				13F0C95C2B44722600D7A69C /* Muscle.swift in Sources */,
 				13C3C3C02B45986D000287A0 /* ExerciseDetailView.swift in Sources */,
 				13F0C9582B4471B300D7A69C /* MuscleListView.swift in Sources */,
+				13FF3B142B49D5A0007DB516 /* WorkoutPlanRowView.swift in Sources */,
 				13F0C9602B447D4900D7A69C /* FavoritesView.swift in Sources */,
+				13FF3B122B48ECDA007DB516 /* PersonelWorkoutView.swift in Sources */,
 				13F0C9622B447D5C00D7A69C /* SettingView.swift in Sources */,
+				13FF3B162B49D63C007DB516 /* WorkoutPlanDetailView.swift in Sources */,
 				13F0C95E2B44750400D7A69C /* MuscleDetailView.swift in Sources */,
 				13F0C9302B44718F00D7A69C /* ContentView.swift in Sources */,
+				13FF3B192B49DB68007DB516 /* ProgressCircleView.swift in Sources */,
 				13F0C92E2B44718F00D7A69C /* MyFitnessApp.swift in Sources */,
 				13F0C9662B4588DB00D7A69C /* FavoritesManager.swift in Sources */,
 			);

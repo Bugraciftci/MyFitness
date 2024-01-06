@@ -12,12 +12,17 @@ struct ContentView: View {
         TabView {
             MuscleListView(muscles: muscles)
                 .tabItem {
-                    Label("Home", systemImage: "house.fill")
+                    Label("Muscles", systemImage: "dumbbell.fill")
                 }
             
             FavoritesView()
                 .tabItem {
                     Label("Favorites", systemImage: "star.fill")
+                }
+            
+            PersonalWorkoutView()
+                .tabItem {
+                    Label("Workout Plan", systemImage: "list.bullet")
                 }
             
             SettingsView()
@@ -31,6 +36,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(FavoritesManager())  // FavoritesManager örneğini sağla
+            .environmentObject(FavoritesManager()) 
     }
 }
