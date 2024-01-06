@@ -13,7 +13,7 @@ struct MuscleListView: View {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(muscles, id: \.name) { muscle in
-                        NavigationLink(destination: MuscleDetailView(muscle: muscle)) {
+                        NavigationLink(destination: MuscleDetailView(muscle: muscle, favoritesManager: _favoritesManager)) {
                             VStack {
                                 muscle.photo
                                     .resizable()

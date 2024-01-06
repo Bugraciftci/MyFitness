@@ -1,44 +1,43 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    @EnvironmentObject var favoritesManager: FavoritesManager  // Güncelleme
+    @EnvironmentObject var favoritesManager: FavoritesManager
     @State private var showingFavorites = true
     
     var body: some View {
         NavigationView {
-            Group {  // Group kullanarak her iki durum için aynı türde bir view döndürün
+            Group {
                 if showingFavorites {
                     favoriteExercisesList
                 } else {
                     personalWorkoutPlan
                 }
             }
-            .navigationTitle(showingFavorites ? "Favori Egzersizler" : "Antrenman Planım")
+            .navigationTitle(showingFavorites ? "Favorite Exercises" : "My Workout Plan")
             .navigationBarItems(
-                leading: Button("Favoriler") {
+                leading: Button("Favorites") {
                     showingFavorites = true
                 },
-                trailing: Button("Planım") {
+                trailing: Button("My Plan") {
                     showingFavorites = false
                 }
             )
         }
     }
     
-    // Favori egzersizler listesini oluşturan bir alt görünüm
     private var favoriteExercisesList: some View {
         List {
-            ForEach(favoritesManager.favoriteExercises, id: \.self) { exerciseName in
-                Text(exerciseName)
+            ForEach(favoritesManager.favoriteExercises, id: \.self) { exerciseName in                NavigationLink(destination: ExerciseDetailView(exercise: Exercise(name: exerciseName, photo: Image("default_photo"), videoName: "default_video"), favoritesManager: favoritesManager)) {
+                    Text(exerciseName)
+                }
             }
             .onDelete(perform: delete)
         }
     }
     
-    // Kişisel antrenman planını oluşturan bir alt görünüm
     private var personalWorkoutPlan: some View {
-        Text("Kendi Workout Planım")
-        // Burada kişisel planınızın içeriğini ve yönetimini ekleyebilirsiniz.
+        Text("Your personalized workout plan here...")
+        // Add more content or functionality for personal workout plan
     }
     
     func delete(at offsets: IndexSet) {
@@ -52,6 +51,6 @@ struct FavoritesView: View {
 struct FavoritesView_Previews: PreviewProvider {
     static var previews: some View {
         FavoritesView()
-            .environmentObject(FavoritesManager())  // FavoritesManager örneğini sağla
+            .environmentObject(FavoritesManager())
     }
 }

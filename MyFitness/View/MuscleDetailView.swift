@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct MuscleDetailView: View {
-    @EnvironmentObject var favoritesManager: FavoritesManager
     var muscle: Muscle
+    @EnvironmentObject var favoritesManager: FavoritesManager
 
     let columns = [
         GridItem(.flexible()),
@@ -13,7 +13,7 @@ struct MuscleDetailView: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {
                 ForEach(muscle.exercises, id: \.name) { exercise in
-                    NavigationLink(destination: ExerciseDetailView(exercise: exercise)) {
+                    NavigationLink(destination: ExerciseDetailView(exercise: exercise, favoritesManager: favoritesManager)) {
                         VStack {
                             exercise.photo
                                 .resizable()
@@ -36,7 +36,6 @@ struct MuscleDetailView: View {
     }
 }
 
-// Önizleme için geçici veri sağlayın
 struct MuscleDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let testMuscle = Muscle(name: "Biceps", photo: Image("biceps_image"), videoName: "biceps_video", exercises: [
