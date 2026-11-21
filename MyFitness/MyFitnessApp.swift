@@ -2,19 +2,22 @@
 //  MyFitnessApp.swift
 //  MyFitness
 //
-//  Created by Muhammed Buğra on 2.01.2024.
-//
 
 import SwiftUI
 
 @main
 struct MyFitnessApp: App {
-    var favoritesManager = FavoritesManager()
-    
+    @StateObject private var container = AppContainer()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(favoritesManager)
+            MainTabView(
+                discoverVM: container.discoverViewModel,
+                workoutVM: container.workoutViewModel,
+                profileVM: container.profileViewModel
+            )
+            .environmentObject(container)
+            .preferredColorScheme(container.profileViewModel.preferredColorScheme)
         }
     }
 }
