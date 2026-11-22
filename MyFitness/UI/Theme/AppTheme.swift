@@ -63,6 +63,7 @@ enum AppTheme {
     }
 }
 
+@MainActor
 enum HapticEngine {
     static func impact(_ style: UIImpactFeedbackGenerator.FeedbackStyle = .light, enabled: Bool = true) {
         guard enabled else { return }

@@ -1,13 +1,18 @@
 <div align="center">
+  <img src="./assets/banner.svg" width="100%" alt="MyFitness v2.0 Banner" />
+</div>
+
+<div align="center">
 
 # 🏋️‍♂️ MyFitness v2.0 — Native iOS Training & Exercise Studio
 
 **Swift 6 • SwiftUI • Combine • Protocol-Oriented MVVM • Swift Charts • 870+ Interactive Exercise Demos**
 
 [![Platform](https://img.shields.io/badge/Platform-iOS_17%2B-0071E3?style=for-the-badge&logo=apple&logoColor=white)](https://developer.apple.com/ios/)
-[![Swift](https://img.shields.io/badge/Swift-5.9_%2F_6.0-F05138?style=for-the-badge&logo=swift&logoColor=white)](https://swift.org)
+[![Swift](https://img.shields.io/badge/Swift-6.0-F05138?style=for-the-badge&logo=swift&logoColor=white)](https://swift.org)
 [![Architecture](https://img.shields.io/badge/Architecture-MVVM_%2B_DI-10B981?style=for-the-badge)](https://github.com/Bugraciftci/MyFitness)
 [![Dataset](https://img.shields.io/badge/Dataset-free--exercise--db_(870%2B)-38BDF8?style=for-the-badge)](https://github.com/yuhonas/free-exercise-db)
+[![License](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](./LICENSE)
 
 </div>
 
@@ -111,6 +116,12 @@ The project includes unit tests using mock protocols (`MockExerciseRepository`, 
 ## 📚 Dataset Attribution
 
 Exercise metadata and 2-phase demonstration imagery are sourced from [`yuhonas/free-exercise-db`](https://github.com/yuhonas/free-exercise-db) (released under the **Unlicense / Public Domain**).
+
+---
+
+## 📄 License
+
+MIT — see [LICENSE](./LICENSE).
 
 ---
 
