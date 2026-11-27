@@ -8,6 +8,8 @@
 
 **Swift 6 • SwiftUI • Combine • Protocol-Oriented MVVM • Swift Charts • 870+ Interactive Exercise Demos**
 
+[![CI](https://github.com/Bugraciftci/MyFitness/actions/workflows/ci.yml/badge.svg)](https://github.com/Bugraciftci/MyFitness/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/badge/Release-v2.0.0-0EA5E9?style=for-the-badge)](https://github.com/Bugraciftci/MyFitness/releases/tag/v2.0.0)
 [![Platform](https://img.shields.io/badge/Platform-iOS_17%2B-0071E3?style=for-the-badge&logo=apple&logoColor=white)](https://developer.apple.com/ios/)
 [![Swift](https://img.shields.io/badge/Swift-6.0-F05138?style=for-the-badge&logo=swift&logoColor=white)](https://swift.org)
 [![Architecture](https://img.shields.io/badge/Architecture-MVVM_%2B_DI-10B981?style=for-the-badge)](https://github.com/Bugraciftci/MyFitness)
