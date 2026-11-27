@@ -35,7 +35,13 @@ final class DiscoverViewModel: ObservableObject {
         }
 
         bindFilteringPipeline()
-        applyFilters(query: "")
+        applyFilters(
+            exercises: allExercises,
+            query: "",
+            muscle: selectedMuscle,
+            equipment: selectedEquipment,
+            difficulty: selectedDifficulty
+        )
     }
 
     private func bindFilteringPipeline() {
@@ -49,8 +55,15 @@ final class DiscoverViewModel: ObservableObject {
             $selectedMuscle,
             Publishers.CombineLatest($selectedEquipment, $selectedDifficulty)
         )
-        .sink { [weak self] _, query, _, _ in
-            self?.applyFilters(query: query)
+        .sink { [weak self] exercises, query, muscle, equipmentAndDifficulty in
+            let (equipment, difficulty) = equipmentAndDifficulty
+            self?.applyFilters(
+                exercises: exercises,
+                query: query,
+                muscle: muscle,
+                equipment: equipment,
+                difficulty: difficulty
+            )
         }
         .store(in: &cancellables)
     }
@@ -126,17 +139,23 @@ final class DiscoverViewModel: ObservableObject {
         favoriteIDs = store.loadFavoriteIDs()
     }
 
-    private func applyFilters(query: String) {
+    private func applyFilters(
+        exercises: [Exercise],
+        query: String,
+        muscle: MuscleGroup?,
+        equipment: EquipmentFilter,
+        difficulty: DifficultyLevel?
+    ) {
         let trimmed = query.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
 
-        filteredExercises = allExercises.filter { exercise in
-            if let muscle = selectedMuscle, exercise.muscleGroup != muscle {
+        filteredExercises = exercises.filter { exercise in
+            if let muscle, exercise.muscleGroup != muscle {
                 return false
             }
-            if !selectedEquipment.matches(exercise) {
+            if !equipment.matches(exercise) {
                 return false
             }
-            if let level = selectedDifficulty, exercise.level != level {
+            if let difficulty, exercise.level != difficulty {
                 return false
             }
             if !trimmed.isEmpty {
